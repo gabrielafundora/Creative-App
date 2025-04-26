@@ -146,6 +146,8 @@ function markCurrentAsDone() {
     saveUsers(users);
   }
 
+  actualizarContadorRetos();
+
   document.getElementById('reto').style.color = "#28a745";
   document.getElementById('markDoneButton').style.display = "none";
 }
@@ -168,6 +170,7 @@ function loadLastReto() {
       markDoneButton.style.display = "inline-block";
     }
   }
+  actualizarContadorRetos();
 }
 
 function getDoneRetos() {
@@ -176,3 +179,12 @@ function getDoneRetos() {
   const user = users.find(u => u.username === username);
   return user ? user.retosCompletados : [];
 }
+
+function actualizarContadorRetos() {
+  const retosCompletados = getDoneRetos().length;
+
+  const contadorDiv = document.getElementById('contadorRetos');
+  contadorDiv.innerText = `Retos completados: ${retosCompletados}`;
+}
+
+
