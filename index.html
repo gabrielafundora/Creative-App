@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Banco de Retos</title>
-
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
@@ -13,7 +12,6 @@
 
 <div class="container">
 
-  <!-- Sección de Login/Registro -->
   <div id="authSection">
     <h1>Bienvenido al Banco de Retos</h1>
     
@@ -34,29 +32,19 @@
     </div>
   </div>
 
-  <!-- Sección principal del Banco de Retos -->
   <div id="retoSection" style="display:none;">
     <h1>Banco de Retos</h1>
 
-    <!-- Sección del Reto del Día -->
     <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
       <h3>Reto del Día</h3>
       <div id="textoRetoDelDia">Cargando...</div>
       <button id="botonRetoDia" onclick="marcarRetoDelDia()" style="margin-top: 10px;">✔ Marcar como hecho</button>
-      
-      <!-- Historial de Retos del Día -->
-      <div id="historialRetosDia" style="margin-top: 50px; text-align: center;">
-      <h3>Mis Retos del Día completados</h3>
-      <div id="listaHistorialRetos"></div>
-      </div>
     </div>
 
-    <!-- Contador de retos -->
     <div id="contadorRetos" style="margin-bottom: 20px; font-weight: bold;">
       Retos completados: 0
     </div>
 
-    <!-- Área del reto aleatorio -->
     <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
 
     <select id="categorySelect">
@@ -76,6 +64,12 @@
     <div id="logoutSection">
       <button onclick="logout()">Cerrar sesión</button>
     </div>
+
+    <div id="historialRetosDia" style="margin-top: 50px; text-align: center;">
+      <h3>Mis Retos del Día completados</h3>
+      <div id="listaHistorialRetos"></div>
+    </div>
+
   </div>
 
 </div>
@@ -83,8 +77,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="script.js"></script>
 <script>
-  cargarRetos(); // Solo cargar retos
-  checkSession(); // Revisa si hay usuario logueado
+  cargarRetos();
+  checkSession();
 </script>
 
 </body>
