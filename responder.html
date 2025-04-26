@@ -5,21 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responder Reto</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 40px;
+      margin: 0;
+    }
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #333;
+    }
+    #textoReto {
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 20px;
+    }
+    textarea {
+      width: 100%;
+      max-width: 700px;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      resize: vertical;
+      min-height: 200px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #17C3B2;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #149c91;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; padding: 20px;">
 
-<h2>Responder Reto</h2>
-<div id="textoReto" style="margin-bottom: 20px; font-weight: bold;"></div>
+<body>
 
-<textarea id="respuestaTexto" rows="10" style="width: 100%; max-width: 800px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-<br><br>
-<button onclick="guardarRespuestaDesdeResponder()">Guardar Respuesta</button>
+<div class="container">
+  <h2>Responder Reto</h2>
+  <div id="textoReto">Cargando reto...</div>
+
+  <textarea id="respuestaTexto" placeholder="Escribe aquí tu respuesta..."></textarea>
+  <br>
+  <button onclick="guardarRespuestaDesdeResponder()">Guardar Respuesta</button>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 const retoText = params.get('reto');
-document.getElementById('textoReto').innerText = retoText;
+document.getElementById('textoReto').innerText = retoText || "Error cargando el reto.";
 
 function guardarRespuestaDesdeResponder() {
   const textoRespuesta = document.getElementById('respuestaTexto').value.trim();
