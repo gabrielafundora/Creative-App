@@ -19,6 +19,18 @@
   <!-- Sección de Login/Registro -->
   <div id="authSection">
     <h1>Bienvenido al Banco de Retos</h1>
+
+    <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
+      <h3>Reto del Día</h3>
+      <div id="textoRetoDelDia">Cargando...</div>
+    </div>
+
+    <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
+      <h3>Reto del Día</h3>
+      <div id="textoRetoDelDia">Cargando...</div>
+      <button id="botonRetoDia" onclick="marcarRetoDelDia()" style="margin-top: 10px;">✔ Marcar como hecho</button>
+    </div>    
+    
     
     <div id="loginForm">
       <h2>Iniciar sesión</h2>
@@ -81,6 +93,7 @@
 <script>
   cargarRetos();
   checkSession();
+  setTimeout(retoDelDia, 500); // Damos 0.5s para asegurarnos de que los retos se carguen
 </script>
 
 </body>

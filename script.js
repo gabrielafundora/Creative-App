@@ -190,3 +190,78 @@ function actualizarContadorRetos() {
 }
 
 
+function retoDelDia() {
+  if (retos.length === 0) {
+    // Si los retos todavía no han cargado
+    document.getElementById('textoRetoDelDia').innerText = "Cargando retos...";
+    return;
+  }
+
+  const hoy = new Date();
+  const año = hoy.getFullYear();
+  const mes = hoy.getMonth() + 1; // Mes empieza en 0
+  const día = hoy.getDate();
+
+  // Crear una "semilla" basada en la fecha
+  const semilla = año * 10000 + mes * 100 + día;
+
+  // Seleccionar un reto basándonos en la semilla
+  const index = semilla % retos.length;
+  const retoHoy = retos[index];
+
+  // Mostrar el reto del día
+  const texto = `${retoHoy.text} [${retoHoy.category}]`;
+  document.getElementById('textoRetoDelDia').innerText = texto;
+}
+
+function retoDelDia() {
+  if (retos.length === 0) {
+    document.getElementById('textoRetoDelDia').innerText = "Cargando retos...";
+    return;
+  }
+
+  const hoy = new Date();
+  const año = hoy.getFullYear();
+  const mes = hoy.getMonth() + 1;
+  const día = hoy.getDate();
+  const fechaHoy = `${año}-${mes}-${día}`;
+
+  const semilla = año * 10000 + mes * 100 + día;
+  const index = semilla % retos.length;
+  const retoHoy = retos[index];
+
+  document.getElementById('textoRetoDelDia').innerText = `${retoHoy.text} [${retoHoy.category}]`;
+
+  // Verificar si ya fue marcado como hecho
+  const retosDia = JSON.parse(localStorage.getItem('retosDia')) || {};
+  if (retosDia[fechaHoy]) {
+    document.getElementById('botonRetoDia').style.display = 'none';
+    const completado = document.createElement('div');
+    completado.style.color = "#28a745";
+    completado.style.marginTop = "10px";
+    completado.innerText = "✅ Reto del Día completado";
+    document.getElementById('retoDelDia').appendChild(completado);
+  }
+}
+
+function marcarRetoDelDia() {
+  const hoy = new Date();
+  const año = hoy.getFullYear();
+  const mes = hoy.getMonth() + 1;
+  const día = hoy.getDate();
+  const fechaHoy = `${año}-${mes}-${día}`;
+
+  const retosDia = JSON.parse(localStorage.getItem('retosDia')) || {};
+  retosDia[fechaHoy] = true;
+  localStorage.setItem('retosDia', JSON.stringify(retosDia));
+
+  toastr.success('¡Felicidades! Completaste el reto del día.', 'Reto del Día');
+
+  // Ocultar botón y mostrar mensaje de completado
+  document.getElementById('botonRetoDia').style.display = 'none';
+  const completado = document.createElement('div');
+  completado.style.color = "#28a745";
+  completado.style.marginTop = "10px";
+  completado.innerText = "✅ Reto del Día completado";
+  document.getElementById('retoDelDia').appendChild(completado);
+}
