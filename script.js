@@ -49,7 +49,7 @@ function showAllPrompts() {
     return;
   }
 
-  // Limpiar contenido
+  // Limpiar contenido anterior
   allPromptsContainer.innerHTML = "";
 
   // Generar lista
@@ -63,3 +63,4 @@ function showAllPrompts() {
   // Mostrar la lista
   allPromptsContainer.style.display = "block";
 }
+
