@@ -8,6 +8,7 @@ const prompts = [
   
   function newPrompt() {
     const randomIndex = Math.floor(Math.random() * prompts.length);
-    document.getElementById('prompt').innerText = prompts[randomIndex];
+    const promptElement = document.getElementById('prompt');
+    promptElement.innerText = prompts[randomIndex];
   }
   
