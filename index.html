@@ -65,6 +65,15 @@
       <button onclick="logout()">Cerrar sesión</button>
     </div>
 
+    <!-- Área para escribir respuesta al reto actual -->
+    <div id="respuestaSection" style="margin-top: 30px;">
+      <h3>Tu respuesta al reto</h3>
+      <textarea id="respuestaTexto" rows="6" style="width: 100%; max-width: 600px; margin-top: 10px; border-radius: 8px; padding: 10px; border: 1px solid #ccc;"></textarea>
+      <br>
+      <button onclick="guardarRespuesta()" style="margin-top: 10px;">Guardar Respuesta</button>
+    </div>
+
+
     <div id="historialRetosDia" style="margin-top: 50px; text-align: center;">
       <h3>Mis Retos del Día completados</h3>
       <div id="listaHistorialRetos"></div>
