@@ -1,3 +1,12 @@
+toastr.options = {
+  "closeButton": true,
+  "progressBar": true,
+  "positionClass": "toast-top-center",
+  "timeOut": "3000"
+};
+
+let currentRetoText = "";
+
 const retos = [
   { text: "Describe un bosque que cambia de forma según quién lo observa.", category: "Fantasía" },
   { text: "Imagina un animal que nunca ha existido y cuéntanos sobre su mundo.", category: "Fantasía" },
@@ -16,8 +25,6 @@ const retos = [
   { text: "Durante una tormenta, descubres un pasaje secreto en tu ciudad.", category: "Aventura" }
 ];
 
-let currentRetoText = "";
-
 // LOGIN Y REGISTRO
 
 function saveUsers(users) {
@@ -33,14 +40,14 @@ function register() {
   const password = document.getElementById('registerPassword').value.trim();
 
   if (!username || !password) {
-    alert('Por favor, completa todos los campos.');
+    toastr.alert('Por favor, completa todos los campos.');
     return;
   }
 
   const users = getUsers();
 
   if (users.find(u => u.username === username)) {
-    alert('Este usuario ya existe.');
+    toastr.alert('Este usuario ya existe.');
     return;
   }
 
