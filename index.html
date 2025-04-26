@@ -8,24 +8,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Banco de Prompts</h1>
-    <div id="prompt" class="prompt">Haz clic para recibir tu inspiración...</div>
+    <h1>Banco de Retos</h1>
 
+    <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
+    
     <select id="categorySelect">
-        <option value="todas">Todas las categorías</option>
-        <option value="Fantasía">Fantasía</option>
-        <option value="Reflexión">Reflexión</option>
-        <option value="Aventura">Aventura</option>
-      </select>      
-
-    <button onclick="newPrompt()">Nuevo Prompt</button>
-    <div id="prompt" class="prompt">Haz clic para recibir tu inspiración...</div>
-
+      <option value="todas">Todas las categorías</option>
+      <option value="Fantasía">Fantasía</option>
+      <option value="Reflexión">Reflexión</option>
+      <option value="Aventura">Aventura</option>
+    </select>
+    
+    <button onclick="newReto()">Nuevo Reto</button>
     <button id="markDoneButton" onclick="markCurrentAsDone()" style="display: none;">✔ Marcar como hecho</button>
-
-    <button onclick="showAllPrompts()">Ver todos los prompts</button>
-
+    
     <div id="allPrompts" class="all-prompts" style="display: none;"></div>
+    
 
   </div>
 
