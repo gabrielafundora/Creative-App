@@ -1,9 +1,24 @@
 const prompts = [
-  { text: "Escribe sobre una ciudad que solo existe en sueños.", category: "Fantasía" },
-  { text: "Tu personaje descubre una carta escrita hace 100 años.", category: "Aventura" },
-  { text: "Describe el sonido del silencio.", category: "Reflexión" },
-  { text: "Un viaje en tren que cambia el destino de alguien.", category: "Aventura" },
-  { text: "Inventar un mito sobre el origen de una flor.", category: "Fantasía" }
+  // Fantasía
+  { text: "Describe un bosque que cambia de forma según quién lo observa.", category: "Fantasía" },
+  { text: "Imagina un animal que nunca ha existido y cuéntanos sobre su mundo.", category: "Fantasía" },
+  { text: "Una puerta aparece en tu habitación. ¿Qué hay del otro lado?", category: "Fantasía" },
+  { text: "Escribe sobre una ciudad flotante en el cielo.", category: "Fantasía" },
+  { text: "Un mago ha olvidado sus hechizos más importantes. ¿Qué sucede?", category: "Fantasía" },
+
+  // Reflexión
+  { text: "Describe un recuerdo que no sabes si realmente viviste o soñaste.", category: "Reflexión" },
+  { text: "¿Qué significa para ti la palabra 'hogar'?", category: "Reflexión" },
+  { text: "Un objeto cotidiano que guarda una historia profunda.", category: "Reflexión" },
+  { text: "Escribe sobre el paso del tiempo como si fuera un personaje.", category: "Reflexión" },
+  { text: "Una conversación silenciosa entre dos personas.", category: "Reflexión" },
+
+  // Aventura
+  { text: "Tu personaje debe cruzar un país en guerra para entregar un mensaje.", category: "Aventura" },
+  { text: "Explora un barco abandonado en el medio del océano.", category: "Aventura" },
+  { text: "Una expedición a una montaña que nunca ha sido escalada.", category: "Aventura" },
+  { text: "Un mapa antiguo cae en tus manos. ¿Qué haces?", category: "Aventura" },
+  { text: "Durante una tormenta, descubres un pasaje secreto en tu ciudad.", category: "Aventura" }
 ];
   
 function newPrompt() {
