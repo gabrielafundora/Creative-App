@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Banco de Retos</title>
 
-  <!-- Estilos principales -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Toastr CSS para notificaciones bonitas -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
@@ -19,18 +16,6 @@
   <!-- Sección de Login/Registro -->
   <div id="authSection">
     <h1>Bienvenido al Banco de Retos</h1>
-
-    <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
-      <h3>Reto del Día</h3>
-      <div id="textoRetoDelDia">Cargando...</div>
-    </div>
-
-    <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
-      <h3>Reto del Día</h3>
-      <div id="textoRetoDelDia">Cargando...</div>
-      <button id="botonRetoDia" onclick="marcarRetoDelDia()" style="margin-top: 10px;">✔ Marcar como hecho</button>
-    </div>    
-    
     
     <div id="loginForm">
       <h2>Iniciar sesión</h2>
@@ -53,15 +38,21 @@
   <div id="retoSection" style="display:none;">
     <h1>Banco de Retos</h1>
 
+    <!-- Sección del Reto del Día -->
+    <div id="retoDelDia" class="reto-del-dia" style="margin-bottom: 30px; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
+      <h3>Reto del Día</h3>
+      <div id="textoRetoDelDia">Cargando...</div>
+      <button id="botonRetoDia" onclick="marcarRetoDelDia()" style="margin-top: 10px;">✔ Marcar como hecho</button>
+    </div>
+
     <!-- Contador de retos -->
     <div id="contadorRetos" style="margin-bottom: 20px; font-weight: bold;">
       Retos completados: 0
     </div>
 
-    <!-- Área donde se muestra el reto actual -->
+    <!-- Área del reto aleatorio -->
     <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
 
-    <!-- Selector de categoría -->
     <select id="categorySelect">
       <option value="todas">Todas las categorías</option>
       <option value="Creatividad">Creatividad</option>
@@ -73,11 +64,9 @@
       <option value="Mundos imaginarios">Mundos imaginarios</option>
     </select>
 
-    <!-- Botones principales -->
     <button onclick="newReto()">Nuevo Reto</button>
     <button id="markDoneButton" onclick="markCurrentAsDone()" style="display: none;">✔ Marcar como hecho</button>
 
-    <!-- Botón para cerrar sesión -->
     <div id="logoutSection">
       <button onclick="logout()">Cerrar sesión</button>
     </div>
@@ -85,15 +74,11 @@
 
 </div>
 
-<!-- Scripts principales -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="script.js"></script>
-
-<!-- Llamamos cargarRetos y checkSession al iniciar -->
 <script>
   cargarRetos();
   checkSession();
-  setTimeout(retoDelDia, 500); // Damos 0.5s para asegurarnos de que los retos se carguen
 </script>
 
 </body>

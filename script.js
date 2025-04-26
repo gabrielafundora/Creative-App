@@ -94,6 +94,10 @@ function showRetoSection() {
   document.getElementById('authSection').style.display = 'none';
   document.getElementById('retoSection').style.display = 'block';
   loadLastReto();
+  retoDelDia();
+  document.getElementById('authSection').style.display = 'none';
+  document.getElementById('retoSection').style.display = 'block';
+  loadLastReto();
 }
 
 function checkSession() {
