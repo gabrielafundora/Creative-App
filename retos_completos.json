@@ -1,0 +1,402 @@
+[
+  {
+    "text": "Inventa un animal que nadie haya visto nunca.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe sobre una ciudad que existe debajo del mar.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Imagina un objeto cotidiano con poderes mágicos.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "¿Y si los árboles pudieran hablarnos? Escribe una conversación.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Crea un personaje que puede cambiar de forma a voluntad.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Describe un lugar donde siempre es de noche.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe una historia que ocurra en un solo minuto.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Imagina una fiesta a la que asisten criaturas mitológicas.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe una historia en la que las emociones se ven como colores.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Inventa una profesión que aún no existe.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Crea una carta enviada desde un planeta desconocido.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Describe un espejo que no refleja la realidad.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "¿Qué pasaría si las sombras cobraran vida? Escríbelo.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Inventa una ley absurda y muestra sus consecuencias.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Crea una isla habitada por seres invisibles.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe una historia donde el protagonista nunca aparece.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Imagina un circo de criaturas extraterrestres.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Crea una nueva festividad y describe cómo se celebra.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe una historia donde el tiempo funcione al revés.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Imagina que cada persona tiene un pequeño dragón compañero.",
+    "category": "Creatividad"
+  },
+  {
+    "text": "Escribe una escena solo con diálogos, sin descripciones.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Describe un lugar usando los cinco sentidos.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe un monólogo interior de alguien que duda de todo.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Haz un relato en segunda persona ('Tú caminas por el bosque...').",
+    "category": "Técnica"
+  },
+  {
+    "text": "Cuenta una historia completa en menos de 150 palabras.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe una escena de acción sin usar adjetivos.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Describe la tristeza sin mencionar emociones.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe un diálogo donde uno de los personajes no dice la verdad.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Cuenta un evento importante desde el punto de vista de un animal.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Haz una descripción de un objeto antiguo con mucha nostalgia.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe una conversación de texto entre dos desconocidos.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Haz un retrato literario de alguien que odias.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe una historia usando solo preguntas.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Crea una escena en la que la atmósfera sea más importante que la acción.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Describe un accidente sin usar la palabra 'accidente'.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Cuenta un día normal desde la perspectiva de un objeto (un reloj, un bolígrafo...).",
+    "category": "Técnica"
+  },
+  {
+    "text": "Haz que un personaje revele su pasado solo a través de sus acciones.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe un poema que no rime.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Cuenta una historia a través de cartas o mensajes de voz.",
+    "category": "Técnica"
+  },
+  {
+    "text": "Haz una descripción hiperrealista de un lugar pequeño (una habitación, una cabina de teléfono...).",
+    "category": "Técnica"
+  },
+  {
+    "text": "Escribe sobre un miedo que no puedes explicar.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Cuenta un recuerdo que desearías cambiar.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Imagina que puedes enviarle una carta a tu yo del pasado.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Describe cómo sería el último día de la humanidad.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Escribe sobre un momento donde tuviste que elegir entre dos caminos.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Describe el hogar sin mencionar paredes ni muebles.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Cuenta una historia en la que el personaje aprende algo importante tarde.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Escribe una despedida que no suene triste.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Crea un texto en el que el silencio tenga un papel protagónico.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Describe el cambio de estación como una metáfora de tu vida.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Escribe sobre el momento más solitario que recuerdes.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Inventa un ritual de despedida para los amigos.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Escribe sobre una promesa que nunca pudiste cumplir.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Haz que un objeto cuente su historia a través de los años.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Describe un reencuentro después de muchos años.",
+    "category": "Reflexión"
+  },
+  {
+    "text": "Crea un personaje que está huyendo de algo, pero nunca dices qué es.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe una historia que termine en el mismo lugar donde empieza.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Haz que un objeto perdido conecte dos historias distintas.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Crea una historia donde el protagonista sea su propio antagonista.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe una historia que ocurra en un solo edificio.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Inventa una tradición familiar y cómo cambia con el tiempo.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe un cuento donde el clima influya en el estado de ánimo.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Haz una historia donde un error pequeño cause grandes consecuencias.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Cuenta una historia de amor donde los personajes nunca se encuentran.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe una carta que cambie la vida de quien la recibe.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Haz una historia que solo tenga una escena.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Crea una historia basada en un malentendido.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe la biografía de un personaje inventado.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Cuenta una historia donde el protagonista olvide quién es.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Crea una historia en la que el final sea un nuevo comienzo.",
+    "category": "Narrativa"
+  },
+  {
+    "text": "Escribe un cuento usando solo frases cortas.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Haz una historia en la que cada párrafo cambie de perspectiva.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Escribe una escena solo con sensaciones táctiles.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Cuenta algo dramático en tono de comedia.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Escribe un texto sin usar la letra 'e'.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Haz un relato donde las descripciones sean exageradas a propósito.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Cambia la voz narrativa a mitad de la historia.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Escribe una historia que rime (aunque sea un relato largo).",
+    "category": "Estilo"
+  },
+  {
+    "text": "Haz una historia usando solo imágenes sensoriales.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Cuenta un suceso terrible usando un tono alegre.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Escribe una historia fragmentada en recuerdos sueltos.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Describe una escena como si fueras un pintor, no un escritor.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Haz un relato usando una estructura de receta.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Escribe una escena que funcione como palíndromo (se entienda al derecho y al revés).",
+    "category": "Estilo"
+  },
+  {
+    "text": "Crea una historia que empiece con el final.",
+    "category": "Estilo"
+  },
+  {
+    "text": "Describe un mercado en un día ajetreado.",
+    "category": "Observación"
+  },
+  {
+    "text": "Retrata la atmósfera de una estación de tren vacía.",
+    "category": "Observación"
+  },
+  {
+    "text": "Haz un retrato literario de un anciano que ves en la calle.",
+    "category": "Observación"
+  },
+  {
+    "text": "Escribe sobre la vista desde una ventana.",
+    "category": "Observación"
+  },
+  {
+    "text": "Describe cómo cambia el cielo en un atardecer.",
+    "category": "Observación"
+  },
+  {
+    "text": "Cuenta la historia de un objeto viejo que encuentras en casa.",
+    "category": "Observación"
+  },
+  {
+    "text": "Retrata el sonido ambiente de una cafetería.",
+    "category": "Observación"
+  },
+  {
+    "text": "Describe el olor de una panadería por la mañana.",
+    "category": "Observación"
+  },
+  {
+    "text": "Haz una mini historia solo basada en lo que ves en un parque.",
+    "category": "Observación"
+  },
+  {
+    "text": "Escribe sobre un callejón olvidado de la ciudad.",
+    "category": "Observación"
+  },
+  {
+    "text": "Crea una ciudad suspendida entre dos montañas.",
+    "category": "Mundos imaginarios"
+  },
+  {
+    "text": "Inventa un sistema de comunicación que no use palabras.",
+    "category": "Mundos imaginarios"
+  },
+  {
+    "text": "Diseña una civilización que vive en cavernas bajo el mar.",
+    "category": "Mundos imaginarios"
+  },
+  {
+    "text": "Crea una cultura donde el tiempo se mida de forma distinta.",
+    "category": "Mundos imaginarios"
+  },
+  {
+    "text": "Inventa una fiesta tradicional de un mundo de criaturas mágicas.",
+    "category": "Mundos imaginarios"
+  }
+]

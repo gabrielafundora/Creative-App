@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Banco de Retos</title>
+
+  <!-- Estilos principales -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Toastr CSS -->
+
+  <!-- Toastr CSS para notificaciones bonitas -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-  <!-- Toastr JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
 </head>
+
 <body>
 
 <div class="container">
 
+  <!-- Sección de Login/Registro -->
   <div id="authSection">
     <h1>Bienvenido al Banco de Retos</h1>
     
@@ -36,25 +37,35 @@
     </div>
   </div>
 
-  <div id="contadorRetos" style="margin-bottom: 20px; font-weight: bold;">
-    Retos completados: 0
-  </div>  
-
+  <!-- Sección principal del Banco de Retos -->
   <div id="retoSection" style="display:none;">
     <h1>Banco de Retos</h1>
 
+    <!-- Contador de retos -->
+    <div id="contadorRetos" style="margin-bottom: 20px; font-weight: bold;">
+      Retos completados: 0
+    </div>
+
+    <!-- Área donde se muestra el reto actual -->
     <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
 
+    <!-- Selector de categoría -->
     <select id="categorySelect">
       <option value="todas">Todas las categorías</option>
-      <option value="Fantasía">Fantasía</option>
+      <option value="Creatividad">Creatividad</option>
+      <option value="Técnica">Técnica</option>
       <option value="Reflexión">Reflexión</option>
-      <option value="Aventura">Aventura</option>
+      <option value="Narrativa">Narrativa</option>
+      <option value="Estilo">Estilo</option>
+      <option value="Observación">Observación</option>
+      <option value="Mundos imaginarios">Mundos imaginarios</option>
     </select>
 
+    <!-- Botones principales -->
     <button onclick="newReto()">Nuevo Reto</button>
     <button id="markDoneButton" onclick="markCurrentAsDone()" style="display: none;">✔ Marcar como hecho</button>
 
+    <!-- Botón para cerrar sesión -->
     <div id="logoutSection">
       <button onclick="logout()">Cerrar sesión</button>
     </div>
@@ -62,8 +73,13 @@
 
 </div>
 
+<!-- Scripts principales -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="script.js"></script>
+
+<!-- Llamamos cargarRetos y checkSession al iniciar -->
 <script>
+  cargarRetos();
   checkSession();
 </script>
 
