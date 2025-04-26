@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responder Reto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+<h2>Responder Reto</h2>
+<div id="textoReto" style="margin-bottom: 20px; font-weight: bold;"></div>
+
+<textarea id="respuestaTexto" rows="10" style="width: 100%; max-width: 800px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+<br><br>
+<button onclick="guardarRespuestaDesdeResponder()">Guardar Respuesta</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const retoText = params.get('reto');
+document.getElementById('textoReto').innerText = retoText;
+
+function guardarRespuestaDesdeResponder() {
+  const textoRespuesta = document.getElementById('respuestaTexto').value.trim();
+  if (!textoRespuesta) {
+    toastr.error('No puedes guardar una respuesta vacía.', 'Error');
+    return;
+  }
+
+  const username = localStorage.getItem('loggedUser');
+  if (!username) {
+    toastr.error('Debes iniciar sesión.', 'Error');
+    return;
+  }
+
+  let respuestasGuardadas = JSON.parse(localStorage.getItem('respuestas')) || {};
+
+  if (!respuestasGuardadas[username]) {
+    respuestasGuardadas[username] = {};
+  }
+
+  respuestasGuardadas[username][retoText] = textoRespuesta;
+  localStorage.setItem('respuestas', JSON.stringify(respuestasGuardadas));
+
+  toastr.success('¡Respuesta guardada exitosamente!', 'Guardado');
+}
+</script>
+
+</body>
+</html>

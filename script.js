@@ -1,5 +1,5 @@
+
 let retos = []; 
-let currentRetoText = "";
 
 function cargarRetos() {
   fetch('retos_completos.json')
@@ -319,4 +319,13 @@ function mostrarBadge(contenedor, texto) {
   badge.style.fontWeight = "bold";
   badge.innerText = texto;
   contenedor.appendChild(badge);
+}
+
+function abrirResponderReto() {
+  if (!currentRetoText) {
+    toastr.error('Primero selecciona un reto.', 'Error');
+    return;
+  }
+  const encodedReto = encodeURIComponent(currentRetoText);
+  window.open(`responder.html?reto=${encodedReto}`, '_blank');
 }
