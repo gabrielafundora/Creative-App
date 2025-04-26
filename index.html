@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Banco de Prompts</title>
+  <title>Banco de Retos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,22 +11,24 @@
     <h1>Banco de Retos</h1>
 
     <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
-    
+
     <select id="categorySelect">
       <option value="todas">Todas las categorías</option>
       <option value="Fantasía">Fantasía</option>
       <option value="Reflexión">Reflexión</option>
       <option value="Aventura">Aventura</option>
     </select>
-    
+
     <button onclick="newReto()">Nuevo Reto</button>
     <button id="markDoneButton" onclick="markCurrentAsDone()" style="display: none;">✔ Marcar como hecho</button>
-    
+
     <div id="allPrompts" class="all-prompts" style="display: none;"></div>
-    
 
   </div>
 
   <script src="script.js"></script>
+  <script>
+    loadLastReto();
+  </script>
 </body>
 </html>

@@ -36,6 +36,8 @@ function newReto() {
     currentRetoText = selectedReto.text;
     retoElement.innerText = selectedReto.text;
 
+    localStorage.setItem('currentReto', currentRetoText);
+
     const doneRetos = JSON.parse(localStorage.getItem('doneRetos')) || [];
     if (doneRetos.includes(currentRetoText)) {
       retoElement.style.color = "#28a745";
@@ -65,4 +67,24 @@ function markCurrentAsDone() {
 
   retoElement.style.color = "#28a745";
   markDoneButton.style.display = "none";
+}
+
+function loadLastReto() {
+  const lastReto = localStorage.getItem('currentReto');
+  const retoElement = document.getElementById('reto');
+  const markDoneButton = document.getElementById('markDoneButton');
+  
+  if (lastReto) {
+    currentRetoText = lastReto;
+    retoElement.innerText = lastReto;
+
+    const doneRetos = JSON.parse(localStorage.getItem('doneRetos')) || [];
+    if (doneRetos.includes(currentRetoText)) {
+      retoElement.style.color = "#28a745";
+      markDoneButton.style.display = "none";
+    } else {
+      retoElement.style.color = "#333333";
+      markDoneButton.style.display = "inline-block";
+    }
+  }
 }
