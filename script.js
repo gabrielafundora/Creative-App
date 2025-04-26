@@ -40,4 +40,26 @@ function newPrompt() {
   }
 }
 
+function showAllPrompts() {
+  const allPromptsContainer = document.getElementById('allPrompts');
   
+  // Si ya está visible, ocultarlo
+  if (allPromptsContainer.style.display === "block") {
+    allPromptsContainer.style.display = "none";
+    return;
+  }
+
+  // Limpiar contenido
+  allPromptsContainer.innerHTML = "";
+
+  // Generar lista
+  prompts.forEach(prompt => {
+    const promptItem = document.createElement('div');
+    promptItem.className = 'prompt-item';
+    promptItem.innerHTML = `<strong>${prompt.category}</strong>: ${prompt.text}`;
+    allPromptsContainer.appendChild(promptItem);
+  });
+
+  // Mostrar la lista
+  allPromptsContainer.style.display = "block";
+}
