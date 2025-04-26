@@ -21,6 +21,8 @@ const prompts = [
   { text: "Durante una tormenta, descubres un pasaje secreto en tu ciudad.", category: "Aventura" }
 ];
   
+let currentPromptText = "";
+
 function newPrompt() {
   const selectedCategory = document.getElementById('categorySelect').value;
   
@@ -32,13 +34,28 @@ function newPrompt() {
 
   const randomIndex = Math.floor(Math.random() * filteredPrompts.length);
   const promptElement = document.getElementById('prompt');
+  const markDoneButton = document.getElementById('markDoneButton');
   
   if (filteredPrompts.length > 0) {
-    promptElement.innerText = filteredPrompts[randomIndex].text;
+    const selectedPrompt = filteredPrompts[randomIndex];
+    currentPromptText = selectedPrompt.text; // Guardamos el texto actual
+    promptElement.innerText = selectedPrompt.text;
+
+    // Verificar si ya está marcado como hecho
+    const donePrompts = JSON.parse(localStorage.getItem('donePrompts')) || [];
+    if (donePrompts.includes(currentPromptText)) {
+      promptElement.style.color = "#28a745"; // Verde si ya estaba hecho
+      markDoneButton.style.display = "none"; // Ya no mostrar botón
+    } else {
+      promptElement.style.color = "#333333"; // Normal si no estaba hecho
+      markDoneButton.style.display = "inline-block"; // Mostrar botón
+    }
   } else {
     promptElement.innerText = "No hay prompts en esta categoría todavía.";
+    markDoneButton.style.display = "none"; // No mostrar botón si no hay prompts
   }
 }
+
 
 function showAllPrompts() {
   const allPromptsContainer = document.getElementById('allPrompts');
@@ -66,4 +83,22 @@ function showAllPrompts() {
   allPromptsContainer.classList.add('fade-in');
 }
 
+function markCurrentAsDone() {
+  if (!currentPromptText) return;
+
+  const donePrompts = JSON.parse(localStorage.getItem('donePrompts')) || [];
+
+  // Si no estaba marcado, lo guardamos
+  if (!donePrompts.includes(currentPromptText)) {
+    donePrompts.push(currentPromptText);
+    localStorage.setItem('donePrompts', JSON.stringify(donePrompts));
+  }
+
+  // Actualizar visualmente
+  const promptElement = document.getElementById('prompt');
+  const markDoneButton = document.getElementById('markDoneButton');
+
+  promptElement.style.color = "#28a745"; // Cambiar color a verde
+  markDoneButton.style.display = "none"; // Ocultar botón "Marcar como hecho"
+}
 
