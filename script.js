@@ -46,6 +46,7 @@ function showAllPrompts() {
   // Si ya está visible, ocultarlo
   if (allPromptsContainer.style.display === "block") {
     allPromptsContainer.style.display = "none";
+    allPromptsContainer.classList.remove('fade-in');
     return;
   }
 
@@ -60,7 +61,9 @@ function showAllPrompts() {
     allPromptsContainer.appendChild(promptItem);
   });
 
-  // Mostrar la lista
+  // Mostrar la lista con efecto
   allPromptsContainer.style.display = "block";
+  allPromptsContainer.classList.add('fade-in');
 }
+
 
