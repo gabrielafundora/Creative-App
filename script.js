@@ -15,9 +15,10 @@ function cargarRetos() {
     .then(data => {
       retos = data;
       console.log(`Se cargaron ${retos.length} retos.`);
-      // Actualizamos el contador si ya hay sesión iniciada
+      
+      // Aquí movemos las llamadas
       if (localStorage.getItem('loggedUser')) {
-        actualizarContadorRetos();
+        showRetoSection(); // Ya dentro de showRetoSection llamas loadLastReto(), retoDelDia(), etc.
       }
     })
     .catch(error => {
