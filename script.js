@@ -96,10 +96,9 @@ function showRetoSection() {
   document.getElementById('retoSection').style.display = 'block';
   loadLastReto();
   retoDelDia();
-  document.getElementById('authSection').style.display = 'none';
-  document.getElementById('retoSection').style.display = 'block';
-  loadLastReto();
+  mostrarHistorialRetosDia(); // Agregamos aquí
 }
+
 
 function checkSession() {
   const user = localStorage.getItem('loggedUser');
@@ -269,4 +268,50 @@ function marcarRetoDelDia() {
   completado.style.marginTop = "10px";
   completado.innerText = "✅ Reto del Día completado";
   document.getElementById('retoDelDia').appendChild(completado);
+}
+
+function mostrarHistorialRetosDia() {
+  const retosDia = JSON.parse(localStorage.getItem('retosDia')) || {};
+  const historialDiv = document.getElementById('listaHistorialRetos');
+  
+  historialDiv.innerHTML = ''; // Limpiar antes de pintar
+
+  const fechasCompletadas = Object.keys(retosDia).filter(fecha => retosDia[fecha]);
+
+  if (fechasCompletadas.length === 0) {
+    historialDiv.innerHTML = '<p>Aún no has completado ningún reto del día.</p>';
+    return;
+  }
+
+  const lista = document.createElement('ul');
+  lista.style.listStyle = "none";
+  lista.style.padding = "0";
+
+  fechasCompletadas.forEach(fecha => {
+    const item = document.createElement('li');
+    item.style.marginBottom = "8px";
+    item.innerHTML = `✅ ${fecha}`;
+    lista.appendChild(item);
+  });
+
+  historialDiv.appendChild(lista);
+
+  // Mostrar también un pequeño contador
+  const contador = document.createElement('p');
+  contador.style.marginTop = "15px";
+  contador.style.fontWeight = "bold";
+  contador.innerText = `Total de retos del día completados: ${fechasCompletadas.length}`;
+  historialDiv.appendChild(contador);
+
+  // Opcional: mostrar logro si completa 7 retos
+  if (fechasCompletadas.length >= 7) {
+    const badge = document.createElement('div');
+    badge.style.marginTop = "20px";
+    badge.style.padding = "10px";
+    badge.style.background = "#ffe082";
+    badge.style.borderRadius = "10px";
+    badge.style.fontWeight = "bold";
+    badge.innerText = "🏅 ¡Logro desbloqueado: 7 Retos del Día Completados!";
+    historialDiv.appendChild(badge);
+  }
 }
