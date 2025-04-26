@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco de Retos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div id="authSection">
+    <h1>Bienvenido al Banco de Retos</h1>
+    
+    <div id="loginForm">
+      <h2>Iniciar sesión</h2>
+      <input type="text" id="loginUsername" placeholder="Nombre de usuario">
+      <input type="password" id="loginPassword" placeholder="Contraseña">
+      <button onclick="login()">Entrar</button>
+      <p>¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate aquí</a></p>
+    </div>
+
+    <div id="registerForm" style="display:none;">
+      <h2>Registro</h2>
+      <input type="text" id="registerUsername" placeholder="Nombre de usuario">
+      <input type="password" id="registerPassword" placeholder="Contraseña">
+      <button onclick="register()">Registrar</button>
+      <p>¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+
+  <div id="retoSection" style="display:none;">
+    <h1>Banco de Retos</h1>
+
+    <div id="reto" class="prompt">Haz clic para recibir tu inspiración...</div>
+
+    <select id="categorySelect">
+      <option value="todas">Todas las categorías</option>
+      <option value="Fantasía">Fantasía</option>
+      <option value="Reflexión">Reflexión</option>
+      <option value="Aventura">Aventura</option>
+    </select>
+
+    <button onclick="newReto()">Nuevo Reto</button>
+    <button id="markDoneButton" onclick="markCurrentAsDone()" style="display: none;">✔ Marcar como hecho</button>
+
+    <div id="logoutSection">
+      <button onclick="logout()">Cerrar sesión</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  checkSession();
+</script>
+
+</body>
+</html>
